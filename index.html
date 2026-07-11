@@ -19,10 +19,8 @@ font-family:Arial,sans-serif;
 
 body{
 background:#f5f5f5;
+color:#222;
 }
-
-
-/* HEADER */
 
 header{
 background:#111;
@@ -33,292 +31,160 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
+flex-wrap:wrap;
 }
 
 .logo img{
 width:130px;
 }
 
-ul{
+.menu{
 display:flex;
 gap:15px;
-list-style:none;
 }
 
-ul a{
+.menu a{
 color:white;
 text-decoration:none;
+font-weight:bold;
 }
 
-
-/* SEARCH */
+.lang button{
+padding:8px 12px;
+margin:3px;
+border:none;
+border-radius:5px;
+cursor:pointer;
+background:#ff4081;
+color:white;
+}
 
 .search{
-text-align:center;
 padding:20px;
+text-align:center;
 }
 
 .search input{
 width:80%;
 padding:12px;
-border-radius:20px;
+border-radius:25px;
 border:1px solid #ccc;
 }
 
-
-
-/* HERO */
-
 .hero{
-
 height:350px;
-
 background:url("https://images.unsplash.com/photo-1445205170230-053b83016050")
 center/cover;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 text-align:center;
-
 color:white;
-
 }
 
 .hero h1{
+font-size:45px;
+}
 
-font-size:40px;
-
+.hero p{
+font-size:20px;
+margin-top:10px;
 }
 
 .hero button{
-
 margin-top:20px;
-
 padding:12px 30px;
-
 background:#ff4081;
-
 color:white;
-
 border:none;
-
-border-radius:5px;
-
+border-radius:20px;
 }
-
-
-
-/* CATEGORY */
 
 .products{
-
 padding:30px;
-
 text-align:center;
-
 }
-
 
 .container{
-
 display:flex;
-
 justify-content:center;
-
 gap:20px;
-
 flex-wrap:wrap;
-
 }
-
-
 
 .card{
-
 background:white;
-
 width:250px;
-
 padding:15px;
-
-border-radius:10px;
-
+border-radius:15px;
 box-shadow:0 0 10px #ccc;
-
 }
-
 
 .card img{
-
 width:100%;
-
 height:250px;
-
 object-fit:cover;
-
 border-radius:10px;
-
 }
-
 
 .card button{
-
 margin-top:10px;
-
 padding:10px 20px;
-
 background:#111;
-
 color:white;
-
 border:none;
-
-border-radius:5px;
-
+border-radius:20px;
 }
-
-
-
-/* ABOUT CONTACT */
 
 .about,
 .contact{
-
 background:white;
-
 margin:20px;
-
 padding:30px;
-
+border-radius:15px;
 text-align:center;
-
-border-radius:10px;
-
 }
 
-
-.about p,
-.contact p{
-
-margin-top:10px;
-
-font-size:18px;
-
-}
-
-
-
-/* WHATSAPP */
-
-.whatsapp{
-
-background:#25D366;
-
+footer{
+background:#111;
 color:white;
-
-padding:15px;
-
-border:none;
-
-border-radius:5px;
-
-}
-
-
-
-.whatsapp-float{
-
-position:fixed;
-
-bottom:20px;
-
-right:20px;
-
-background:#25D366;
-
-color:white;
-
-width:60px;
-
-height:60px;
-
-border-radius:50%;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:30px;
-
-text-decoration:none;
-
-}
-
-
-
-/* MOBILE */
-
-@media(max-width:600px){
-
-nav{
-
-flex-direction:column;
-
-}
-
-ul{
-
-margin-top:15px;
-
-}
-
-.hero h1{
-
-font-size:28px;
-
-}
-
+padding:20px;
+text-align:center;
 }
 
 </style>
 
-</head>
-
-
-
-<body>
-
+</head><body>
 
 <header>
 
 <nav>
 
-
 <div class="logo">
-
 <img src="logo.jpg" alt="Mal Fashion Logo">
+</div>
+
+
+<div class="menu">
+
+<a href="#" id="home">Home</a>
+
+<a href="#" id="shop">Shop</a>
+
+<a href="#" id="aboutMenu">About</a>
+
+<a href="#" id="contactMenu">Contact</a>
 
 </div>
 
 
+<div class="lang">
 
-<ul>
+<button onclick="eng()">EN</button>
 
-<li><a href="#">Home</a></li>
+<button onclick="sin()">සිං</button>
 
-<li><a href="#">Shop</a></li>
-
-<li><a href="#">About</a></li>
-
-<li><a href="#">Contact</a></li>
-
-</ul>
+</div>
 
 
 </nav>
@@ -327,35 +193,37 @@ font-size:28px;
 
 
 
-
 <div class="search">
 
-<input type="text" placeholder="Search Fashion...">
+<input id="searchBox" 
+placeholder="Search Fashion...">
 
 </div>
-
-
 
 
 
 <section class="hero">
 
-
 <div>
 
-<h1>Mal Fashion</h1>
+<h1 id="heroTitle">
+Mal Fashion
+</h1>
 
-<p>Style Your Life</p>
 
-<button>Shop Now</button>
+<p id="heroText">
+Style Your Life
+</p>
+
+
+<button id="shopButton">
+Shop Now
+</button>
 
 
 </div>
 
-
 </section>
-
-
 
 
 
@@ -363,7 +231,10 @@ font-size:28px;
 <section class="products">
 
 
-<h2>Shop By Category</h2>
+<h2 id="collectionTitle">
+Our Collection
+</h2>
+
 
 
 <div class="container">
@@ -372,13 +243,24 @@ font-size:28px;
 
 <div class="card">
 
+
 <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
 
-<h3>Women Fashion</h3>
 
-<p>Latest Women's Styles</p>
+<h3 id="product1">
+Women Fashion
+</h3>
 
-<button>View More</button>
+
+<p id="desc1">
+Latest Women's Styles
+</p>
+
+
+<button id="cart1">
+Add Cart
+</button>
+
 
 </div>
 
@@ -387,14 +269,25 @@ font-size:28px;
 
 
 <div class="card">
+
 
 <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
 
-<h3>Men Fashion</h3>
 
-<p>Modern Men's Styles</p>
+<h3 id="product2">
+Men Fashion
+</h3>
 
-<button>View More</button>
+
+<p id="desc2">
+Modern Men's Styles
+</p>
+
+
+<button id="cart2">
+Add Cart
+</button>
+
 
 </div>
 
@@ -404,35 +297,37 @@ font-size:28px;
 
 <div class="card">
 
+
 <img src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561">
 
-<h3>Accessories</h3>
 
-<p>Complete Your Style</p>
-
-<button>View More</button>
-
-</div>
+<h3 id="product3">
+Accessories
+</h3>
 
 
-
-</div>
-
-
-</section>
+<p id="desc3">
+Complete Your Style
+</p>
 
 
-
-
-
+<button id="cart3">
+Add Cart
+</button>
 <section class="about">
 
-<h2>About Mal Fashion</h2>
 
-<p>
-Mal Fashion brings modern and stylish fashion items
-with quality and comfort for everyone.
+<h2 id="aboutTitle">
+About Mal Fashion
+</h2>
+
+
+<p id="aboutText">
+
+Mal Fashion brings modern and stylish fashion items with quality and comfort for everyone.
+
 </p>
+
 
 </section>
 
@@ -442,23 +337,41 @@ with quality and comfort for everyone.
 
 <section class="contact">
 
-<h2>Contact Us</h2>
 
-<p>📱 WhatsApp: 076 018 5921</p>
+<h2 id="contactTitle">
+Contact Us
+</h2>
 
-<p>📍 Sri Lanka</p>
 
-<p>📧 malfashion@gmail.com</p>
+<p id="phoneText">
+📱 WhatsApp : 076 018 5921
+</p>
+
+
+<p id="locationText">
+📍 Sri Lanka
+</p>
+
+
+<p id="emailText">
+📧 malfashion@gmail.com
+</p>
+
 
 <br>
 
+
 <a class="whatsapp"
 href="https://wa.me/94760185921"
-target="_blank">
+target="_blank"
+style="background:#25D366;color:white;padding:12px 25px;text-decoration:none;border-radius:20px;">
 
+<span id="whatsappText">
 Chat On WhatsApp
+</span>
 
 </a>
+
 
 </section>
 
@@ -474,6 +387,216 @@ target="_blank">
 
 </a>
 
+
+
+
+
+<footer>
+
+<p id="footerText">
+© 2026 Mal Fashion. All Rights Reserved.
+</p>
+
+
+</footer>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+<script>
+
+
+function sin(){
+
+
+document.getElementById("home").innerHTML =
+"මුල් පිටුව";
+
+document.getElementById("shop").innerHTML =
+"වෙළඳසැල";
+
+document.getElementById("aboutMenu").innerHTML =
+"අප ගැන";
+
+document.getElementById("contactMenu").innerHTML =
+"සම්බන්ධ වන්න";
+
+
+
+document.getElementById("heroText").innerHTML =
+"ඔබේ ජීවිතයට අලුත් විලාසිතාවක්";
+
+document.getElementById("shopButton").innerHTML =
+"දැන් මිලදී ගන්න";
+
+
+
+document.getElementById("collectionTitle").innerHTML =
+"අපගේ එකතුව";
+
+
+
+document.getElementById("product1").innerHTML =
+"කාන්තා විලාසිතා";
+
+document.getElementById("desc1").innerHTML =
+"නවතම කාන්තා විලාසිතා";
+
+
+document.getElementById("product2").innerHTML =
+"පිරිමි විලාසිතා";
+
+document.getElementById("desc2").innerHTML =
+"නවීන පිරිමි විලාසිතා";
+
+
+document.getElementById("product3").innerHTML =
+"උපාංග";
+
+document.getElementById("desc3").innerHTML =
+"ඔබේ විලාසිතාව සම්පූර්ණ කරන්න";
+
+
+
+document.getElementById("cart1").innerHTML =
+"කරත්තයට එක් කරන්න";
+
+document.getElementById("cart2").innerHTML =
+"කරත්තයට එක් කරන්න";
+
+document.getElementById("cart3").innerHTML =
+"කරත්තයට එක් කරන්න";
+
+
+
+document.getElementById("aboutTitle").innerHTML =
+"Mal Fashion ගැන";
+
+document.getElementById("aboutText").innerHTML =
+"Mal Fashion ඔබට උසස් තත්ත්වයේ නවීන විලාසිතා ඇඳුම් සහ උපාංග ලබා දෙයි.";
+
+
+
+document.getElementById("contactTitle").innerHTML =
+"අප අමතන්න";
+
+document.getElementById("whatsappText").innerHTML =
+"WhatsApp හරහා සම්බන්ධ වන්න";
+
+
+
+document.getElementById("searchBox").placeholder =
+"විලාසිතා සොයන්න...";
+
+
+document.getElementById("footerText").innerHTML =
+"© 2026 Mal Fashion. සියලු හිමිකම් ඇවිරිණි.";
+
+
+}
+
+
+
+
+
+function eng(){
+
+
+document.getElementById("home").innerHTML =
+"Home";
+
+document.getElementById("shop").innerHTML =
+"Shop";
+
+document.getElementById("aboutMenu").innerHTML =
+"About";
+
+document.getElementById("contactMenu").innerHTML =
+"Contact";
+
+
+
+document.getElementById("heroText").innerHTML =
+"Style Your Life";
+
+
+document.getElementById("shopButton").innerHTML =
+"Shop Now";
+
+
+
+document.getElementById("collectionTitle").innerHTML =
+"Our Collection";
+
+
+
+document.getElementById("product1").innerHTML =
+"Women Fashion";
+
+document.getElementById("desc1").innerHTML =
+"Latest Women's Styles";
+
+
+document.getElementById("product2").innerHTML =
+"Men Fashion";
+
+document.getElementById("desc2").innerHTML =
+"Modern Men's Styles";
+
+
+document.getElementById("product3").innerHTML =
+"Accessories";
+
+document.getElementById("desc3").innerHTML =
+"Complete Your Style";
+
+
+
+document.getElementById("cart1").innerHTML =
+"Add Cart";
+
+document.getElementById("cart2").innerHTML =
+"Add Cart";
+
+document.getElementById("cart3").innerHTML =
+"Add Cart";
+
+
+
+document.getElementById("aboutTitle").innerHTML =
+"About Mal Fashion";
+
+
+document.getElementById("aboutText").innerHTML =
+"Mal Fashion brings modern and stylish fashion items with quality and comfort for everyone.";
+
+
+
+document.getElementById("contactTitle").innerHTML =
+"Contact Us";
+
+
+document.getElementById("whatsappText").innerHTML =
+"Chat On WhatsApp";
+
+
+document.getElementById("searchBox").placeholder =
+"Search Fashion...";
+
+
+document.getElementById("footerText").innerHTML =
+"© 2026 Mal Fashion. All Rights Reserved.";
+
+
+}
+
+
+</script>
 
 
 </body>
