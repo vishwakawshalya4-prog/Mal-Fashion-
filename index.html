@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mal Fashion</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+
+/* HEADER */
+
+header{
+background:#111;
+padding:15px 20px;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo img{
+width:130px;
+}
+
+ul{
+display:flex;
+gap:15px;
+list-style:none;
+}
+
+ul a{
+color:white;
+text-decoration:none;
+}
+
+
+/* SEARCH */
+
+.search{
+text-align:center;
+padding:20px;
+}
+
+.search input{
+width:80%;
+padding:12px;
+border-radius:20px;
+border:1px solid #ccc;
+}
+
+
+
+/* HERO */
+
+.hero{
+
+height:350px;
+
+background:url("https://images.unsplash.com/photo-1445205170230-053b83016050")
+center/cover;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero button{
+
+margin-top:20px;
+
+padding:12px 30px;
+
+background:#ff4081;
+
+color:white;
+
+border:none;
+
+border-radius:5px;
+
+}
+
+
+
+/* CATEGORY */
+
+.products{
+
+padding:30px;
+
+text-align:center;
+
+}
+
+
+.container{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+
+.card{
+
+background:white;
+
+width:250px;
+
+padding:15px;
+
+border-radius:10px;
+
+box-shadow:0 0 10px #ccc;
+
+}
+
+
+.card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+}
+
+
+.card button{
+
+margin-top:10px;
+
+padding:10px 20px;
+
+background:#111;
+
+color:white;
+
+border:none;
+
+border-radius:5px;
+
+}
+
+
+
+/* ABOUT CONTACT */
+
+.about,
+.contact{
+
+background:white;
+
+margin:20px;
+
+padding:30px;
+
+text-align:center;
+
+border-radius:10px;
+
+}
+
+
+.about p,
+.contact p{
+
+margin-top:10px;
+
+font-size:18px;
+
+}
+
+
+
+/* WHATSAPP */
+
+.whatsapp{
+
+background:#25D366;
+
+color:white;
+
+padding:15px;
+
+border:none;
+
+border-radius:5px;
+
+}
+
+
+
+.whatsapp-float{
+
+position:fixed;
+
+bottom:20px;
+
+right:20px;
+
+background:#25D366;
+
+color:white;
+
+width:60px;
+
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:30px;
+
+text-decoration:none;
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+nav{
+
+flex-direction:column;
+
+}
+
+ul{
+
+margin-top:15px;
+
+}
+
+.hero h1{
+
+font-size:28px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<header>
+
+<nav>
+
+
+<div class="logo">
+
+<img src="logo.jpg" alt="Mal Fashion Logo">
+
+</div>
+
+
+
+<ul>
+
+<li><a href="#">Home</a></li>
+
+<li><a href="#">Shop</a></li>
+
+<li><a href="#">About</a></li>
+
+<li><a href="#">Contact</a></li>
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+<div class="search">
+
+<input type="text" placeholder="Search Fashion...">
+
+</div>
+
+
+
+
+
+<section class="hero">
+
+
+<div>
+
+<h1>Mal Fashion</h1>
+
+<p>Style Your Life</p>
+
+<button>Shop Now</button>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="products">
+
+
+<h2>Shop By Category</h2>
+
+
+<div class="container">
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+
+<h3>Women Fashion</h3>
+
+<p>Latest Women's Styles</p>
+
+<button>View More</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b">
+
+<h3>Men Fashion</h3>
+
+<p>Modern Men's Styles</p>
+
+<button>View More</button>
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1523779917675-b6ed3a42a561">
+
+<h3>Accessories</h3>
+
+<p>Complete Your Style</p>
+
+<button>View More</button>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="about">
+
+<h2>About Mal Fashion</h2>
+
+<p>
+Mal Fashion brings modern and stylish fashion items
+with quality and comfort for everyone.
+</p>
+
+</section>
+
+
+
+
+
+<section class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📱 WhatsApp: 076 018 5921</p>
+
+<p>📍 Sri Lanka</p>
+
+<p>📧 malfashion@gmail.com</p>
+
+<br>
+
+<a class="whatsapp"
+href="https://wa.me/94760185921"
+target="_blank">
+
+Chat On WhatsApp
+
+</a>
+
+</section>
+
+
+
+
+
+<a class="whatsapp-float"
+href="https://wa.me/94760185921"
+target="_blank">
+
+💬
+
+</a>
+
+
+
+</body>
+
+</html>
